@@ -30,6 +30,8 @@ async def update_board(board_id: int, updated_board: Board) -> None:
         if board.id == board_id:
             boards[i] = updated_board
             return
+        else:
+            boards.apppend(updated_board)
 
 @app.delete("/boards/{board_id}")
 async def delete_boards(board_id: int) -> None:
